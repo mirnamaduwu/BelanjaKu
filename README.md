@@ -12,11 +12,16 @@ Proyek ini diadaptasi dari contoh TokoKita yang dikirim, dengan nama aplikasi, p
 - Postman untuk pengujian REST API
 
 ## 1. Pengaturan database
-Aplikasi memakai database `belanjaku`. Konfigurasi ada di `src/main/resources/application.properties`.
+Aplikasi menggunakan database MySQL dengan nama belanjaku. Konfigurasi koneksi terdapat di src/main/resources/application.properties.
 
-Nilai awal koneksi: username `root`, password kosong. Jika MySQL di komputer memiliki password, ubah `spring.datasource.password` atau atur environment variable `DB_PASSWORD`. Username juga dapat diatur melalui `DB_USERNAME`. Pastikan MySQL aktif dan berjalan pada port 3306.
+Pengaturan koneksi dapat dilakukan melalui environment variable berikut:
+- DB_URL: alamat koneksi database.
+- DB_USERNAME: username MySQL.
+- DB_PASSWORD: password MySQL.
 
-Database dibuat otomatis oleh JDBC jika akun MySQL memiliki izin membuat database. Tabel dibuat/diperbarui oleh JPA (`ddl-auto=update`).
+Untuk penggunaan lokal, aplikasi menggunakan alamat database 127.0.0.1:3306/belanjaku dan username default root. Sesuaikan password dengan konfigurasi MySQL pada komputer masing-masing.
+
+Pastikan MySQL aktif sebelum menjalankan aplikasi. Tabel database dibuat atau diperbarui secara otomatis oleh Hibernate/JPA menggunakan konfigurasi ddl-auto=update.
 
 ## 2. Membuka proyek di VS Code
 1. Ekstrak folder proyek.

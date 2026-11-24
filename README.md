@@ -32,8 +32,8 @@ Database dibuat otomatis oleh JDBC jika akun MySQL memiliki izin membuat databas
 Saat aplikasi pertama kali dijalankan, `DataSeeder.java` otomatis membuat 4 kategori dan 12 produk contoh apabila tabel produk masih kosong. Daftar produk contoh mencakup Gaming, Fashion, Dapur & Rumah, serta PC & Laptop. Jika kategori sudah ada tetapi produk masih kosong, produk tetap akan dibuat.
 
 ## 4. Akun admin awal
-- Email: `admin@belanjaku.id`
-- Password: `admin123`
+- Email: admin@belanjaku.id
+- Password: Diatur melalui environment variable ADMIN_INITIAL_PASSWORD.
 
 Akun awal dibuat otomatis saat tabel pengguna masih kosong. Untuk proyek nyata, ganti password awal dan jangan gunakan kredensial contoh di server publik.
 

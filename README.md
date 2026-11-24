@@ -64,15 +64,20 @@ Akun awal dibuat otomatis saat tabel pengguna masih kosong. Untuk proyek nyata, 
 **Catatan batasan versi contoh:** belum ada halaman dashboard admin grafis; fungsi admin saat ini diakses melalui REST API (misalnya Postman). Belum ada CRUD kategori melalui endpoint, dan pilihan metode pembayaran belum terhubung ke payment gateway; aplikasi hanya menyimpan pilihan metode. Gambar produk menggunakan URL `imageUrl`, atau ikon emoji sebagai cadangan.
 
 ## 6. Pengujian Postman
-1. Buka Postman.
-2. Pilih **Import**.
-3. Masukkan file `postman/BelanjaKu.postman_collection.json`.
-4. Pastikan collection variable `baseUrl` bernilai `http://localhost:8080`.
-5. Jalankan request **Login ADMIN** untuk menyimpan token.
-6. Jalankan request sesuai urutan: kategori/produk → keranjang & wishlist → checkout → riwayat pesanan.
-7. Untuk request bertanda `[ADMIN]`, login sebagai admin terlebih dahulu.
+Pengujian REST API dilakukan menggunakan aplikasi Postman.
 
-Token dikirim melalui header `Authorization: Bearer {{token}}`.
+1. Buka Postman.
+2. Import koleksi Postman BelanjaKu yang tersedia pada folder proyek lokal.
+3. Pastikan collection variable baseUrl bernilai http://localhost:8080.
+4. Jalankan request Login ADMIN untuk mendapatkan token autentikasi.
+5. Jalankan request sesuai urutan: kategori dan produk → keranjang dan wishlist → checkout → riwayat pesanan.
+6. Untuk request bertanda [ADMIN], gunakan token dari akun admin.
+
+Token autentikasi dikirim melalui header:
+
+Authorization: Bearer {{token}}
+
+Catatan: File koleksi Postman tidak disertakan dalam repository GitHub publik.
 
 ## 7. Daftar endpoint utama
 | Method | Endpoint | Fungsi |

@@ -1,0 +1,23 @@
+
+# Hasil build Maven
+target/
+
+# File konfigurasi IDE
+.idea/
+*.iml
+.vscode/
+
+# File rahasia
+.env
+.env.*
+!.env.example
+
+# Log
+*.log
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
+
+# File Postman yang mungkin berisi token
+postman/

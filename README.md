@@ -20,11 +20,12 @@ Database dibuat otomatis oleh JDBC jika akun MySQL memiliki izin membuat databas
 
 ## 2. Membuka proyek di VS Code
 1. Ekstrak folder proyek.
-2. Di VS Code pilih **File → Open Folder**, lalu pilih folder `BelanjaKu` yang berisi `pom.xml`.
-3. Pastikan JDK 21 terpasang (`java -version`).
-4. Pastikan Maven tersedia. Instal ekstensi **Extension Pack for Java** dan **Spring Boot Extension Pack** bila belum ada.
-5. Jalankan `BelanjakuApplication.java` dengan tombol **Run**, atau buka terminal pada folder proyek lalu jalankan `mvn spring-boot:run`.
-6. Buka `http://localhost:8080`.
+2. Buka VS Code, pilih File → Open Folder, lalu pilih folder BelanjaKu yang berisi pom.xml.
+3. Pastikan JDK 21 sudah terpasang dengan menjalankan java -version di terminal.
+4. Instal ekstensi Extension Pack for Java dan Spring Boot Extension Pack jika belum tersedia.
+5. Buka terminal VS Code pada folder proyek.
+6. Jalankan aplikasi menggunakan perintah berikut di Windows: .\mvnw.cmd spring-boot:run
+7. Setelah aplikasi berhasil berjalan, buka http://localhost:8080 melalui browser. Untuk membangun file aplikasi, jalankan: .\mvnw.cmd clean package -DskipTests
 
 > Catatan: ZIP sumber dari contoh tidak menyertakan Maven Wrapper (`mvnw.cmd`). Jika perintah `mvn` tidak dikenali, instal Maven atau pindahkan file proyek ini ke proyek Maven yang sudah memiliki Maven Wrapper.
 
